@@ -116,20 +116,24 @@ Run the command:
 This command will print out potential conflicted papers for every PC member
 using data from the free-form Collaborators box. Output would look something like this:
 
-\=================================
+```
+=================================
 PC member  0 ## AJAY JOSHI
-\=================================
+=================================
 1 ## 76 : RAJIV JOSHI  !!! VERIFY !!!
 2 ## 100 : AJAY JOSHI
 3 ## 100 : AJAY JOSHI
 4 ## 100 : - AJAY JOSHI
+```
 
 The format is:
 
-\==================================
+```
+==================================
 PC member   [PC_ID] ## PC_NAME
-\==================================
+==================================
 [PAPER_ID] ## [FUZZY_SCORE] : [MATCHED STRING]  [!!! VERIFY !!!]
+```
 
 where:
   - PC_ID is an internal id for each PC member.
@@ -153,10 +157,10 @@ match. So that line should be deleted.
 People often declare collaborator names along with their respective
 institutions, in a myriad of different ways.
 
-  DAVID WOOD - University of Wisconsin 
-  DAVID BROOKS: Harvard 
-  AJAY JOSHI, BU 
-  JASON MARS (Michigan) 
+  * DAVID WOOD - University of Wisconsin
+  * DAVID BROOKS: Harvard
+  * AJAY JOSHI, BU
+  * JASON MARS (Michigan)
 
 To simplify this mess, I try to strip away as many institution names as I can
 so that the fuzzy string matching only needs to worry about people names at
