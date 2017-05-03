@@ -111,14 +111,14 @@ identification into three steps:
 
 Run the command:
 
-  python main.py data/isca2017db-data.json data/isca2017db-pcinfo.csv data/institutions.csv mark-collaborators > results/step1_pcconflicts
+    python main.py data/isca2017db-data.json data/isca2017db-pcinfo.csv data/institutions.csv mark-collaborators > results/step1_pcconflicts
 
 This command will print out potential conflicted papers for every PC member
 using data from the free-form Collaborators box. Output would look something like this:
 
-=================================
+\=================================
 PC member  0 ## AJAY JOSHI
-=================================
+\=================================
 1 ## 76 : RAJIV JOSHI  !!! VERIFY !!!
 2 ## 100 : AJAY JOSHI
 3 ## 100 : AJAY JOSHI
@@ -126,9 +126,9 @@ PC member  0 ## AJAY JOSHI
 
 The format is:
 
-==================================
+\==================================
 PC member   [PC_ID] ## PC_NAME
-==================================
+\==================================
 [PAPER_ID] ## [FUZZY_SCORE] : [MATCHED STRING]  [!!! VERIFY !!!]
 
 where:
@@ -153,10 +153,10 @@ match. So that line should be deleted.
 People often declare collaborator names along with their respective
 institutions, in a myriad of different ways.
 
-  DAVID WOOD - University of Wisconsin
-  DAVID BROOKS: Harvard
-  AJAY JOSHI, BU
-  JASON MARS (Michigan)
+  DAVID WOOD - University of Wisconsin 
+  DAVID BROOKS: Harvard 
+  AJAY JOSHI, BU 
+  JASON MARS (Michigan) 
 
 To simplify this mess, I try to strip away as many institution names as I can
 so that the fuzzy string matching only needs to worry about people names at
@@ -187,7 +187,7 @@ right. When you are done, move on to steps 2 and 3.
 
 Run the command:
 
-  python main.py data/isca2017db-data.json data/isca2017db-pcinfo.csv data/institutions.csv find-conflicts
+    python main.py data/isca2017db-data.json data/isca2017db-pcinfo.csv data/institutions.csv find-conflicts
 
 This command will match PC members with institutional conflicts and add them to
 the set of collaborator conflicts identified in Step 1 (using the prepared
@@ -225,7 +225,7 @@ I have a way to automatically partition a PC into two sets for a 2-day meeting
 in a way that best balances the self-declared areas of expertise. To use this system,
 run the command:
 
-  python main.py data/isca2017db-data.json data/isca2017db-pcinfo.csv data/institutions.csv --existing-update-csv update.csv partition-pc
+    python main.py data/isca2017db-data.json data/isca2017db-pcinfo.csv data/institutions.csv --existing-update-csv update.csv partition-pc
 
 This will print two files containing the set of PC members for each day.
 
