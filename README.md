@@ -150,9 +150,9 @@ conflicts. You don't need to take out the "VERIFY" part, but it might be good
 help you track which ones you have taken care of already. The VERIFY string
 is just there to help you spot potential mismatches.
 
-The example shows that "DAVID WOOD" matched "AJAY JOSHI" with "RAJIV JOSHI"
-with score 76, which is above the threshold, but it would not be a correct
-match. So that line should be deleted.
+The example shows that "AJAY JOSHI" matched "RAJIV JOSHI" with score 76, which
+is above the threshold, but it would not be a correct match. So that line
+should be deleted.
 
 People often declare collaborator names along with their respective
 institutions, in a myriad of different ways.
